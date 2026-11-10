@@ -1,0 +1,19 @@
+# All prices are integer ticks, not dollars. E.g. tick=0.01, 10100 ticks=$101.00.
+NEW 100 SELL LIMIT 10100 5 GTC
+NEW 101 SELL LIMIT 10100 4 GTC
+NEW 102 SELL LIMIT 10200 8 GTC
+BOOK
+# Trades against FIFO maker ids 100 then 101.
+NEW 200 BUY LIMIT 10100 7 GTC
+REPLACE 101 10100 1
+# Market order consumes maker 101 and then 102; any unfilled part expires.
+NEW 201 BUY MARKET 0 3 IOC
+NEW 300 BUY LIMIT 9900 5 GTC
+NEW 301 BUY LIMIT 9900 2 GTC
+# Increasing quantity loses priority, so id=301 goes ahead of id=300.
+REPLACE 300 9900 7
+NEW 400 SELL MARKET 0 3 IOC
+CANCEL 300
+BOOK
+STATS
+CHECK

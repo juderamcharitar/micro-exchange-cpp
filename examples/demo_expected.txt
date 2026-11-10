@@ -1,0 +1,26 @@
+ACK accepted leaves=5 resting=yes
+ACK accepted leaves=4 resting=yes
+ACK accepted leaves=8 resting=yes
+BIDS (best first)
+ASKS (best first)
+  10100 qty=9 orders=2
+  10200 qty=8 orders=1
+TRADE seq=1 maker=100 taker=200 price_ticks=10100 qty=5
+TRADE seq=2 maker=101 taker=200 price_ticks=10100 qty=2
+ACK accepted leaves=0 resting=no
+ACK replaced; priority retained leaves=1 resting=yes
+TRADE seq=3 maker=101 taker=201 price_ticks=10100 qty=1
+TRADE seq=4 maker=102 taker=201 price_ticks=10200 qty=2
+ACK accepted leaves=0 resting=no
+ACK accepted leaves=5 resting=yes
+ACK accepted leaves=2 resting=yes
+ACK replaced; priority reset leaves=7 resting=yes
+TRADE seq=5 maker=301 taker=400 price_ticks=9900 qty=2
+TRADE seq=6 maker=300 taker=400 price_ticks=9900 qty=1
+ACK accepted leaves=0 resting=no
+CANCELLED id=300 qty=6
+BIDS (best first)
+ASKS (best first)
+  10200 qty=6 orders=1
+STATS accepted=8 cancelled=1 replaced=2 rejected=0 trades=6 executed_qty=13 resting=1
+CHECK OK

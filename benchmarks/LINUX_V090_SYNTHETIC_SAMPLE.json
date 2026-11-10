@@ -1,0 +1,21 @@
+{
+  "schema": "micro_exchange_flow_v1",
+  "data_kind": "synthetic_order_event_trace",
+  "profile": "mixed",
+  "seed": 42,
+  "assumed_regime_arrivals_per_second": {"calm": 2200, "volatile": 5400, "stress": 12000},
+  "seed_events": 16,
+  "generated_events": 12000,
+  "total_events": 12016,
+  "event_counts": {"new": 8779, "market_ioc": 1679, "limit_ioc": 763, "limit_gtc": 6337, "cancel": 2368, "replace": 869},
+  "executions": {"trades": 5410, "quantity": 40056},
+  "quote_metrics": {"two_sided_quote_samples": 12015, "mean_spread_ticks": 1.6231, "min_spread_ticks": 1, "max_spread_ticks": 21, "mean_bid_depth5_qty": 1823.0000, "mean_ask_depth5_qty": 1952.7847, "mean_depth5_imbalance": -0.0399},
+  "regimes": {
+    "calm": {"events": 4000, "new": 2830, "cancel": 886, "replace": 284, "aggressive_new": 420, "span_us": 1780805, "observed_arrivals_per_second": 2245.6136, "trades": 762, "quantity": 2140, "quotes": {"two_sided_quote_samples": 4000, "mean_spread_ticks": 1.0047, "min_spread_ticks": 1, "max_spread_ticks": 2, "mean_bid_depth5_qty": 1148.4673, "mean_ask_depth5_qty": 1305.4735, "mean_depth5_imbalance": -0.0469}},
+    "seed": {"events": 16, "new": 16, "cancel": 0, "replace": 0, "aggressive_new": 0, "span_us": 0, "observed_arrivals_per_second": 0.0000, "trades": 0, "quantity": 0, "quotes": {"two_sided_quote_samples": 15, "mean_spread_ticks": 2.0000, "min_spread_ticks": 2, "max_spread_ticks": 2, "mean_bid_depth5_qty": 45.0000, "mean_ask_depth5_qty": 41.2500, "mean_depth5_imbalance": 0.1117}},
+    "stress": {"events": 4000, "new": 3037, "cancel": 692, "replace": 271, "aggressive_new": 1311, "span_us": 333847, "observed_arrivals_per_second": 11978.5411, "trades": 3159, "quantity": 29696, "quotes": {"two_sided_quote_samples": 4000, "mean_spread_ticks": 2.8630, "min_spread_ticks": 1, "max_spread_ticks": 21, "mean_bid_depth5_qty": 1696.4507, "mean_ask_depth5_qty": 1814.4515, "mean_depth5_imbalance": -0.0499}},
+    "volatile": {"events": 4000, "new": 2896, "cancel": 790, "replace": 314, "aggressive_new": 711, "span_us": 741899, "observed_arrivals_per_second": 5390.2216, "trades": 1489, "quantity": 8220, "quotes": {"two_sided_quote_samples": 4000, "mean_spread_ticks": 1.0000, "min_spread_ticks": 1, "max_spread_ticks": 1, "mean_bid_depth5_qty": 2631.1940, "mean_ask_depth5_qty": 2746.0753, "mean_depth5_imbalance": -0.0236}}
+  },
+  "final_book": {"best_bid_ticks": 10007, "best_ask_ticks": 10009, "resting_orders": 758},
+  "execution_fingerprint_fnv1a64": "0xb0a625e30bf64fcb"
+}

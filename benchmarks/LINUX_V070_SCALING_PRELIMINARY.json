@@ -1,0 +1,398 @@
+{
+  "schema": "micro_exchange_scaling_v2",
+  "project_version": "0.7.0",
+  "date_utc": "2026-11-09T15:54:06.085095+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "tcp_nodelay": true,
+  "repeats": 1,
+  "python": "3.13.5",
+  "server_executable": "/mnt/data/micro-exchange-cpp-v0.7.0-work/micro-exchange-cpp/build/exchange_server",
+  "workload": "2 clients/pair: passive sell + crossing IOC buy, periodic new/replace/cancel bid",
+  "limits": "max 32 concurrent connections in server; timed region excludes server startup, client connections, journal replay and correctness queries",
+  "results": [
+    {
+      "journal_mode": "off",
+      "journal_stats": {
+        "seq": "70",
+        "mode": "sync",
+        "appended": "0",
+        "syncs": "0",
+        "max_group": "0",
+        "last_group": "0"
+      },
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 25,
+      "measured_mutations": 65,
+      "trades": 25,
+      "elapsed_seconds": 0.002063,
+      "throughput_mutations_per_second": 31512.87,
+      "response_ack_rtt": {
+        "samples": 65,
+        "mean_us": 24.519,
+        "p50_us": 20.971,
+        "p99_us": 79.809
+      },
+      "fill_rtt": {
+        "samples": 25,
+        "mean_us": 25.241,
+        "p50_us": 22.043,
+        "p99_us": 36.485
+      },
+      "correctness": {
+        "trades": 25,
+        "accepted_mutations": 65,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "off",
+      "journal_stats": {
+        "seq": "135",
+        "mode": "sync",
+        "appended": "0",
+        "syncs": "0",
+        "max_group": "0",
+        "last_group": "0"
+      },
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 25,
+      "measured_mutations": 130,
+      "trades": 50,
+      "elapsed_seconds": 0.002155,
+      "throughput_mutations_per_second": 60311.76,
+      "response_ack_rtt": {
+        "samples": 130,
+        "mean_us": 27.851,
+        "p50_us": 24.687,
+        "p99_us": 60.009
+      },
+      "fill_rtt": {
+        "samples": 50,
+        "mean_us": 32.141,
+        "p50_us": 27.151,
+        "p99_us": 60.76
+      },
+      "correctness": {
+        "trades": 50,
+        "accepted_mutations": 130,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "off",
+      "journal_stats": {
+        "seq": "265",
+        "mode": "sync",
+        "appended": "0",
+        "syncs": "0",
+        "max_group": "0",
+        "last_group": "0"
+      },
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 25,
+      "measured_mutations": 260,
+      "trades": 100,
+      "elapsed_seconds": 0.006097,
+      "throughput_mutations_per_second": 42644.21,
+      "response_ack_rtt": {
+        "samples": 260,
+        "mean_us": 83.025,
+        "p50_us": 68.402,
+        "p99_us": 254.11
+      },
+      "fill_rtt": {
+        "samples": 100,
+        "mean_us": 77.944,
+        "p50_us": 66.409,
+        "p99_us": 187.911
+      },
+      "correctness": {
+        "trades": 100,
+        "accepted_mutations": 260,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "sync",
+      "journal_stats": {
+        "seq": "70",
+        "mode": "sync",
+        "appended": "65",
+        "syncs": "65",
+        "max_group": "1",
+        "last_group": "1"
+      },
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 25,
+      "measured_mutations": 65,
+      "trades": 25,
+      "elapsed_seconds": 0.024547,
+      "throughput_mutations_per_second": 2647.97,
+      "response_ack_rtt": {
+        "samples": 65,
+        "mean_us": 369.153,
+        "p50_us": 332.979,
+        "p99_us": 585.416
+      },
+      "fill_rtt": {
+        "samples": 25,
+        "mean_us": 355.091,
+        "p50_us": 354.761,
+        "p99_us": 522.122
+      },
+      "correctness": {
+        "trades": 25,
+        "accepted_mutations": 65,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 5971
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "sync",
+      "journal_stats": {
+        "seq": "135",
+        "mode": "sync",
+        "appended": "130",
+        "syncs": "130",
+        "max_group": "1",
+        "last_group": "1"
+      },
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 25,
+      "measured_mutations": 130,
+      "trades": 50,
+      "elapsed_seconds": 0.041703,
+      "throughput_mutations_per_second": 3117.28,
+      "response_ack_rtt": {
+        "samples": 130,
+        "mean_us": 631.3,
+        "p50_us": 571.821,
+        "p99_us": 1268.72
+      },
+      "fill_rtt": {
+        "samples": 50,
+        "mean_us": 723.02,
+        "p50_us": 609.302,
+        "p99_us": 2825.966
+      },
+      "correctness": {
+        "trades": 50,
+        "accepted_mutations": 130,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 11982
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "sync",
+      "journal_stats": {
+        "seq": "265",
+        "mode": "sync",
+        "appended": "260",
+        "syncs": "260",
+        "max_group": "1",
+        "last_group": "1"
+      },
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 25,
+      "measured_mutations": 260,
+      "trades": 100,
+      "elapsed_seconds": 0.071694,
+      "throughput_mutations_per_second": 3626.53,
+      "response_ack_rtt": {
+        "samples": 260,
+        "mean_us": 1052.509,
+        "p50_us": 1016.272,
+        "p99_us": 2065.202
+      },
+      "fill_rtt": {
+        "samples": 100,
+        "mean_us": 1101.848,
+        "p50_us": 1045.165,
+        "p99_us": 2240.614
+      },
+      "correctness": {
+        "trades": 100,
+        "accepted_mutations": 260,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 24072
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "group",
+      "journal_stats": {
+        "seq": "70",
+        "mode": "group",
+        "appended": "65",
+        "syncs": "65",
+        "max_group": "1",
+        "last_group": "1"
+      },
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 25,
+      "measured_mutations": 65,
+      "trades": 25,
+      "elapsed_seconds": 0.020281,
+      "throughput_mutations_per_second": 3205.0,
+      "response_ack_rtt": {
+        "samples": 65,
+        "mean_us": 303.64,
+        "p50_us": 272.408,
+        "p99_us": 468.811
+      },
+      "fill_rtt": {
+        "samples": 25,
+        "mean_us": 289.382,
+        "p50_us": 271.537,
+        "p99_us": 390.245
+      },
+      "correctness": {
+        "trades": 25,
+        "accepted_mutations": 65,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 5971
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "group",
+      "journal_stats": {
+        "seq": "135",
+        "mode": "group",
+        "appended": "130",
+        "syncs": "126",
+        "max_group": "2",
+        "last_group": "1"
+      },
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 25,
+      "measured_mutations": 130,
+      "trades": 50,
+      "elapsed_seconds": 0.045563,
+      "throughput_mutations_per_second": 2853.2,
+      "response_ack_rtt": {
+        "samples": 130,
+        "mean_us": 690.312,
+        "p50_us": 559.628,
+        "p99_us": 3035.214
+      },
+      "fill_rtt": {
+        "samples": 50,
+        "mean_us": 655.186,
+        "p50_us": 569.844,
+        "p99_us": 3036.396
+      },
+      "correctness": {
+        "trades": 50,
+        "accepted_mutations": 130,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 11982
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "group",
+      "journal_stats": {
+        "seq": "265",
+        "mode": "group",
+        "appended": "260",
+        "syncs": "173",
+        "max_group": "3",
+        "last_group": "1"
+      },
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 25,
+      "measured_mutations": 260,
+      "trades": 100,
+      "elapsed_seconds": 0.062368,
+      "throughput_mutations_per_second": 4168.78,
+      "response_ack_rtt": {
+        "samples": 260,
+        "mean_us": 942.859,
+        "p50_us": 851.505,
+        "p99_us": 3443.561
+      },
+      "fill_rtt": {
+        "samples": 100,
+        "mean_us": 1032.588,
+        "p50_us": 877.854,
+        "p99_us": 3517.757
+      },
+      "correctness": {
+        "trades": 100,
+        "accepted_mutations": 260,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 24072
+      },
+      "repetition": 1
+    }
+  ]
+}

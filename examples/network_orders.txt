@@ -1,0 +1,8 @@
+# Run via: python client/exchange_client.py --script examples/network_orders.txt
+PING
+NEW 100 SELL LIMIT 10100 5 GTC
+BOOK 5
+NEW 200 BUY LIMIT 10100 3 IOC
+STATS
+CHECK
+QUIT

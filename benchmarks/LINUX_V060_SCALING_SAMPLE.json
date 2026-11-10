@@ -1,0 +1,272 @@
+{
+  "schema": "micro_exchange_scaling_v1",
+  "project_version": "0.6.0",
+  "date_utc": "2026-11-09T15:29:32.166763+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.13.5",
+  "server_executable": "/mnt/data/micro-exchange-cpp-v0.6.0-work/micro-exchange-cpp/build/exchange_server",
+  "workload": "2 clients/pair: passive sell + crossing IOC buy, periodic new/replace/cancel bid",
+  "limits": "max 32 concurrent connections in server; timed region excludes server startup, client connections, journal replay and correctness queries",
+  "results": [
+    {
+      "journal_mode": "off",
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 1.62808,
+      "throughput_mutations_per_second": 119.77,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 8338.695,
+        "p50_us": 76.605,
+        "p99_us": 43741.904
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 152.91,
+        "p50_us": 132.298,
+        "p99_us": 618.156
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      }
+    },
+    {
+      "journal_mode": "off",
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 1.629087,
+      "throughput_mutations_per_second": 239.4,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 8342.361,
+        "p50_us": 75.373,
+        "p99_us": 43863.932
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 134.746,
+        "p50_us": 116.875,
+        "p99_us": 436.263
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      }
+    },
+    {
+      "journal_mode": "off",
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 1.198721,
+      "throughput_mutations_per_second": 650.69,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 5940.079,
+        "p50_us": 60.841,
+        "p99_us": 43835.697
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 119.729,
+        "p50_us": 70.816,
+        "p99_us": 587.971
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      }
+    },
+    {
+      "journal_mode": "off",
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 1.078143,
+      "throughput_mutations_per_second": 1446.93,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 4593.814,
+        "p50_us": 70.175,
+        "p99_us": 44401.889
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 178.422,
+        "p50_us": 75.303,
+        "p99_us": 2575.437
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      }
+    },
+    {
+      "journal_mode": "durable",
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 1.648992,
+      "throughput_mutations_per_second": 118.25,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 8447.566,
+        "p50_us": 512.573,
+        "p99_us": 43830.094
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 731.347,
+        "p50_us": 690.394,
+        "p99_us": 1549.911
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 18027
+      }
+    },
+    {
+      "journal_mode": "durable",
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 1.60974,
+      "throughput_mutations_per_second": 242.28,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 8244.05,
+        "p50_us": 772.942,
+        "p99_us": 44146.499
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 945.336,
+        "p50_us": 896.523,
+        "p99_us": 2280.52
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 36162
+      }
+    },
+    {
+      "journal_mode": "durable",
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 0.953121,
+      "throughput_mutations_per_second": 818.36,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 4533.003,
+        "p50_us": 408.232,
+        "p99_us": 46590.488
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 612.828,
+        "p50_us": 441.14,
+        "p99_us": 1763.02
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 72432
+      }
+    },
+    {
+      "journal_mode": "durable",
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 1.173735,
+      "throughput_mutations_per_second": 1329.09,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 4696.329,
+        "p50_us": 840.058,
+        "p99_us": 44646.516
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 1090.643,
+        "p50_us": 901.279,
+        "p99_us": 3932.634
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 146328
+      }
+    }
+  ]
+}

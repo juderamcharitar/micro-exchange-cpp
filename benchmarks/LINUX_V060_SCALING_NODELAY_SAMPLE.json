@@ -1,0 +1,842 @@
+{
+  "schema": "micro_exchange_scaling_v1",
+  "project_version": "0.6.0",
+  "date_utc": "2026-11-09T15:34:30.152930+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "tcp_nodelay": true,
+  "repeats": 3,
+  "python": "3.13.5",
+  "server_executable": "/mnt/data/micro-exchange-cpp-v0.6.0-work/micro-exchange-cpp/build/exchange_server",
+  "workload": "2 clients/pair: passive sell + crossing IOC buy, periodic new/replace/cancel bid",
+  "limits": "max 32 concurrent connections in server; timed region excludes server startup, client connections, journal replay and correctness queries",
+  "results": [
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 0.010114,
+      "throughput_mutations_per_second": 19279.33,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 47.121,
+        "p50_us": 33.129,
+        "p99_us": 155.493
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 44.984,
+        "p50_us": 34.823,
+        "p99_us": 151.227
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 0.007393,
+      "throughput_mutations_per_second": 26377.34,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 33.866,
+        "p50_us": 29.324,
+        "p99_us": 152.558
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 35.829,
+        "p50_us": 32.899,
+        "p99_us": 75.543
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 0.011778,
+      "throughput_mutations_per_second": 16555.93,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 55.696,
+        "p50_us": 21.492,
+        "p99_us": 211.877
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 92.614,
+        "p50_us": 22.734,
+        "p99_us": 210.195
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 3
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 0.008208,
+      "throughput_mutations_per_second": 47517.23,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 35.305,
+        "p50_us": 25.338,
+        "p99_us": 191.627
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 33.583,
+        "p50_us": 27.521,
+        "p99_us": 111.928
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 0.007763,
+      "throughput_mutations_per_second": 50237.44,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 35.874,
+        "p50_us": 28.813,
+        "p99_us": 136.124
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 41.453,
+        "p50_us": 32.249,
+        "p99_us": 136.895
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 0.010063,
+      "throughput_mutations_per_second": 38755.97,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 43.291,
+        "p50_us": 33.109,
+        "p99_us": 232.368
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 45.108,
+        "p50_us": 36.274,
+        "p99_us": 136.344
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 3
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 0.019069,
+      "throughput_mutations_per_second": 40903.24,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 87.087,
+        "p50_us": 71.797,
+        "p99_us": 313.72
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 90.527,
+        "p50_us": 75.323,
+        "p99_us": 315.994
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 0.01959,
+      "throughput_mutations_per_second": 39816.7,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 89.453,
+        "p50_us": 74.782,
+        "p99_us": 285.638
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 90.611,
+        "p50_us": 77.176,
+        "p99_us": 280.429
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 0.017776,
+      "throughput_mutations_per_second": 43879.25,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 82.599,
+        "p50_us": 66.069,
+        "p99_us": 287.6
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 83.088,
+        "p50_us": 67.201,
+        "p99_us": 270.565
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 3
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 0.053523,
+      "throughput_mutations_per_second": 29146.4,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 257.269,
+        "p50_us": 214.762,
+        "p99_us": 857.174
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 249.205,
+        "p50_us": 205.889,
+        "p99_us": 893.358
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 0.056548,
+      "throughput_mutations_per_second": 27586.99,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 270.155,
+        "p50_us": 210.566,
+        "p99_us": 964.023
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 266.281,
+        "p50_us": 207.931,
+        "p99_us": 935.982
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "off",
+      "tcp_nodelay": true,
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 0.061272,
+      "throughput_mutations_per_second": 25460.38,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 293.033,
+        "p50_us": 243.645,
+        "p99_us": 959.116
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 293.238,
+        "p50_us": 243.104,
+        "p99_us": 960.468
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "not_applicable"
+      },
+      "repetition": 3
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 0.07416,
+      "throughput_mutations_per_second": 2629.45,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 374.614,
+        "p50_us": 342.503,
+        "p99_us": 829.242
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 362.486,
+        "p50_us": 347.045,
+        "p99_us": 590.911
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 18027
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 0.065631,
+      "throughput_mutations_per_second": 2971.15,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 331.09,
+        "p50_us": 299.008,
+        "p99_us": 831.665
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 320.106,
+        "p50_us": 308.673,
+        "p99_us": 497.865
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 18027
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 1,
+      "concurrent_clients": 2,
+      "rounds_per_pair": 75,
+      "measured_mutations": 195,
+      "trades": 75,
+      "elapsed_seconds": 0.067389,
+      "throughput_mutations_per_second": 2893.64,
+      "response_ack_rtt": {
+        "samples": 195,
+        "mean_us": 340.056,
+        "p50_us": 315.622,
+        "p99_us": 634.109
+      },
+      "fill_rtt": {
+        "samples": 75,
+        "mean_us": 342.411,
+        "p50_us": 316.463,
+        "p99_us": 568.722
+      },
+      "correctness": {
+        "trades": 75,
+        "accepted_mutations": 195,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 18027
+      },
+      "repetition": 3
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 0.14379,
+      "throughput_mutations_per_second": 2712.28,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 711.624,
+        "p50_us": 665.406,
+        "p99_us": 1602.549
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 712.088,
+        "p50_us": 674.249,
+        "p99_us": 1393.968
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 36162
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 0.137277,
+      "throughput_mutations_per_second": 2840.96,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 624.791,
+        "p50_us": 579.507,
+        "p99_us": 1516.35
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 695.262,
+        "p50_us": 625.656,
+        "p99_us": 1499.465
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 36162
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 2,
+      "concurrent_clients": 4,
+      "rounds_per_pair": 75,
+      "measured_mutations": 390,
+      "trades": 150,
+      "elapsed_seconds": 0.1164,
+      "throughput_mutations_per_second": 3350.51,
+      "response_ack_rtt": {
+        "samples": 390,
+        "mean_us": 581.463,
+        "p50_us": 547.58,
+        "p99_us": 1590.341
+      },
+      "fill_rtt": {
+        "samples": 150,
+        "mean_us": 652.625,
+        "p50_us": 618.311,
+        "p99_us": 1378.545
+      },
+      "correctness": {
+        "trades": 150,
+        "accepted_mutations": 390,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 36162
+      },
+      "repetition": 3
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 0.23102,
+      "throughput_mutations_per_second": 3376.33,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 1130.089,
+        "p50_us": 1111.745,
+        "p99_us": 2559.582
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 1228.752,
+        "p50_us": 1186.486,
+        "p99_us": 2351.852
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 72432
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 0.26442,
+      "throughput_mutations_per_second": 2949.86,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 1287.277,
+        "p50_us": 1199.556,
+        "p99_us": 3519.6
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 1393.815,
+        "p50_us": 1283.512,
+        "p99_us": 3522.384
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 72432
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 4,
+      "concurrent_clients": 8,
+      "rounds_per_pair": 75,
+      "measured_mutations": 780,
+      "trades": 300,
+      "elapsed_seconds": 0.260542,
+      "throughput_mutations_per_second": 2993.75,
+      "response_ack_rtt": {
+        "samples": 780,
+        "mean_us": 1268.221,
+        "p50_us": 1209.452,
+        "p99_us": 2924.78
+      },
+      "fill_rtt": {
+        "samples": 300,
+        "mean_us": 1361.058,
+        "p50_us": 1291.914,
+        "p99_us": 2538.772
+      },
+      "correctness": {
+        "trades": 300,
+        "accepted_mutations": 780,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 72432
+      },
+      "repetition": 3
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 0.494472,
+      "throughput_mutations_per_second": 3154.88,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 2419.167,
+        "p50_us": 2408.116,
+        "p99_us": 4621.26
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 2635.222,
+        "p50_us": 2582.787,
+        "p99_us": 6647.058
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 146238
+      },
+      "repetition": 1
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 0.496227,
+      "throughput_mutations_per_second": 3143.72,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 2420.665,
+        "p50_us": 2366.183,
+        "p99_us": 5661.843
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 2629.586,
+        "p50_us": 2550.369,
+        "p99_us": 6376.592
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 146328
+      },
+      "repetition": 2
+    },
+    {
+      "journal_mode": "durable",
+      "tcp_nodelay": true,
+      "pairs": 8,
+      "concurrent_clients": 16,
+      "rounds_per_pair": 75,
+      "measured_mutations": 1560,
+      "trades": 600,
+      "elapsed_seconds": 0.483856,
+      "throughput_mutations_per_second": 3224.1,
+      "response_ack_rtt": {
+        "samples": 1560,
+        "mean_us": 2339.593,
+        "p50_us": 2326.828,
+        "p99_us": 4510.588
+      },
+      "fill_rtt": {
+        "samples": 600,
+        "mean_us": 2388.424,
+        "p50_us": 2394.605,
+        "p99_us": 4756.892
+      },
+      "correctness": {
+        "trades": 600,
+        "accepted_mutations": 1560,
+        "checks": {
+          "book": "empty",
+          "engine": "ok",
+          "ledger": "ok"
+        },
+        "post_restart_recovery": "passed",
+        "journal_bytes": 146238
+      },
+      "repetition": 3
+    }
+  ]
+}

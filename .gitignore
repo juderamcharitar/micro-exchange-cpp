@@ -1,0 +1,14 @@
+/build/
+/build-*/
+/.vs/
+/.idea/
+*.obj
+*.o
+*.exe
+*.pdb
+*.log
+.DS_Store
+
+# Local account credentials and all runtime persistence
+/data/
+**/credentials*.json

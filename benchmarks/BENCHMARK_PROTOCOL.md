@@ -1,0 +1,12 @@
+# v0.7 matched persistence experiment — protocol
+
+1. Build Release; verify 9 test suites before comparing performance.
+2. Run `client/bench_scaling.py --mode all --pairs 1,2,4,8 --rounds 75 --repeats 3 --tcp-nodelay` on **one host**, same client/server binaries/settings. Save JSON and run `bench/report_v07.py`.
+3. Every trial launches its own server and, in durable modes, its own empty journal, so history, account identities and queue state cannot contaminate later trials. Client setup, server startup, restart and correctness checks occur outside the timed region.
+4. `off` runs matching without journaling; `sync` uses one flush+fsync/_commit per accepted mutation; `group` writes accepted mutations from ready sockets in the same event-loop select cycle and syncs before returning success. `group` is *not* an asynchronous writer and uses no intentional wait window.
+5. The workload uses 2 Python TCP clients per pair (one passive GTC seller, one crossing IOC buyer), 1 fill per round, and every fifth round a passive add/reduce/cancel sequence. The script counts accepted mutations and verifies exact trading totals, absence of residual book orders, matching invariants, ledger accounting, and full replay in both durable modes.
+6. Record median independent-trial throughput, median of within-trial p50 and p99 ACKs, journal sync count, maximum group size and restart verification. Include min/max trial throughput and hardware/OS/compiler/storage details in published results; don't interpret trial-level percentile medians as pooled latency estimates.
+7. IMPORTANT: process kill/restart and journal checksum/replay tests cannot prove power-cut survival. Acknowledged operations are protected to the extent that the runtime and backing store honor fsync/_commit. A lost ACK does not prove a lost mutation; users must reconcile before retries. On a sync failure, the server terminates before emitting the group's responses.
+8. Compared figures are synthetic loopback application-level results, **not** raw wire latency, production throughput, or a prediction of trading profitability. Benchmark results remain exploratory and environment-dependent. A live market-order-event replay is not included.
+
+**Previous version:** [v0.6 protocol](V060_BENCHMARK_PROTOCOL.md). **User's Windows v0.6 measurements:** [baseline report](WINDOWS_V060_REPORT.md). **Linux v0.7 measurements:** [raw JSON](LINUX_V070_COMPARISON.json) and [generated report](LINUX_V070_REPORT.md).

@@ -1,0 +1,5 @@
+levels,preloaded_orders,cycles,repetitions,operations,trades_per_repetition,median_throughput_ops_per_sec,p50_op_ns,p99_op_ns
+10,20,3000,3,54000,6000,8532225.03,60,140
+100,200,3000,3,54000,6000,7946100.72,61,131
+1000,2000,3000,3,54000,6000,8372953.69,60,120
+5000,10000,3000,3,54000,6000,7177188.03,60,210
